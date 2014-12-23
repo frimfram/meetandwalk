@@ -16,6 +16,10 @@
 		020C304B1A4783E700A43A8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020C304A1A4783E700A43A8E /* Images.xcassets */; };
 		020C304E1A4783E700A43A8E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020C304C1A4783E700A43A8E /* LaunchScreen.xib */; };
 		020C305A1A4783E700A43A8E /* MeetAndWalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 020C30591A4783E700A43A8E /* MeetAndWalkTests.m */; };
+		020C30651A47886100A43A8E /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 020C30641A47886100A43A8E /* Run.m */; };
+		020C30681A47886200A43A8E /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 020C30671A47886200A43A8E /* Location.m */; };
+		020C306A1A4788D100A43A8E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020C30691A4788D100A43A8E /* MapKit.framework */; };
+		020C306C1A478DBB00A43A8E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020C306B1A478DBB00A43A8E /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020C30341A4783E700A43A8E /* MeetAndWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetAndWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		020C30341A4783E700A43A8E /* WalkWithFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkWithFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		020C30381A4783E700A43A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020C30391A4783E700A43A8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		020C303B1A4783E700A43A8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,6 +49,12 @@
 		020C30531A4783E700A43A8E /* MeetAndWalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetAndWalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		020C30581A4783E700A43A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020C30591A4783E700A43A8E /* MeetAndWalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetAndWalkTests.m; sourceTree = "<group>"; };
+		020C30631A47886100A43A8E /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = model/Run.h; sourceTree = "<group>"; };
+		020C30641A47886100A43A8E /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Run.m; path = model/Run.m; sourceTree = "<group>"; };
+		020C30661A47886200A43A8E /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = model/Location.h; sourceTree = "<group>"; };
+		020C30671A47886200A43A8E /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = model/Location.m; sourceTree = "<group>"; };
+		020C30691A4788D100A43A8E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		020C306B1A478DBB00A43A8E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020C306C1A478DBB00A43A8E /* CoreData.framework in Frameworks */,
+				020C306A1A4788D100A43A8E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +80,10 @@
 		020C302B1A4783E700A43A8E = {
 			isa = PBXGroup;
 			children = (
-				020C30361A4783E700A43A8E /* MeetAndWalk */,
-				020C30561A4783E700A43A8E /* MeetAndWalkTests */,
+				020C306B1A478DBB00A43A8E /* CoreData.framework */,
+				020C30691A4788D100A43A8E /* MapKit.framework */,
+				020C30361A4783E700A43A8E /* WalkWithFriends */,
+				020C30561A4783E700A43A8E /* WalkWithFriendsTests */,
 				020C30351A4783E700A43A8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,15 +91,16 @@
 		020C30351A4783E700A43A8E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				020C30341A4783E700A43A8E /* MeetAndWalk.app */,
+				020C30341A4783E700A43A8E /* WalkWithFriends.app */,
 				020C30531A4783E700A43A8E /* MeetAndWalkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		020C30361A4783E700A43A8E /* MeetAndWalk */ = {
+		020C30361A4783E700A43A8E /* WalkWithFriends */ = {
 			isa = PBXGroup;
 			children = (
+				020C306D1A492B5200A43A8E /* model */,
 				020C303B1A4783E700A43A8E /* AppDelegate.h */,
 				020C303C1A4783E700A43A8E /* AppDelegate.m */,
 				020C30411A4783E700A43A8E /* MasterViewController.h */,
@@ -98,6 +113,7 @@
 				020C303E1A4783E700A43A8E /* MeetAndWalk.xcdatamodeld */,
 				020C30371A4783E700A43A8E /* Supporting Files */,
 			);
+			name = WalkWithFriends;
 			path = MeetAndWalk;
 			sourceTree = "<group>";
 		};
@@ -110,12 +126,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		020C30561A4783E700A43A8E /* MeetAndWalkTests */ = {
+		020C30561A4783E700A43A8E /* WalkWithFriendsTests */ = {
 			isa = PBXGroup;
 			children = (
 				020C30591A4783E700A43A8E /* MeetAndWalkTests.m */,
 				020C30571A4783E700A43A8E /* Supporting Files */,
 			);
+			name = WalkWithFriendsTests;
 			path = MeetAndWalkTests;
 			sourceTree = "<group>";
 		};
@@ -127,12 +144,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		020C306D1A492B5200A43A8E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				020C30661A47886200A43A8E /* Location.h */,
+				020C30671A47886200A43A8E /* Location.m */,
+				020C30631A47886100A43A8E /* Run.h */,
+				020C30641A47886100A43A8E /* Run.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		020C30331A4783E700A43A8E /* MeetAndWalk */ = {
+		020C30331A4783E700A43A8E /* WalkWithFriends */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 020C305D1A4783E700A43A8E /* Build configuration list for PBXNativeTarget "MeetAndWalk" */;
+			buildConfigurationList = 020C305D1A4783E700A43A8E /* Build configuration list for PBXNativeTarget "WalkWithFriends" */;
 			buildPhases = (
 				020C30301A4783E700A43A8E /* Sources */,
 				020C30311A4783E700A43A8E /* Frameworks */,
@@ -142,14 +170,14 @@
 			);
 			dependencies = (
 			);
-			name = MeetAndWalk;
+			name = WalkWithFriends;
 			productName = MeetAndWalk;
-			productReference = 020C30341A4783E700A43A8E /* MeetAndWalk.app */;
+			productReference = 020C30341A4783E700A43A8E /* WalkWithFriends.app */;
 			productType = "com.apple.product-type.application";
 		};
-		020C30521A4783E700A43A8E /* MeetAndWalkTests */ = {
+		020C30521A4783E700A43A8E /* WalkWithFriendsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 020C30601A4783E700A43A8E /* Build configuration list for PBXNativeTarget "MeetAndWalkTests" */;
+			buildConfigurationList = 020C30601A4783E700A43A8E /* Build configuration list for PBXNativeTarget "WalkWithFriendsTests" */;
 			buildPhases = (
 				020C304F1A4783E700A43A8E /* Sources */,
 				020C30501A4783E700A43A8E /* Frameworks */,
@@ -160,7 +188,7 @@
 			dependencies = (
 				020C30551A4783E700A43A8E /* PBXTargetDependency */,
 			);
-			name = MeetAndWalkTests;
+			name = WalkWithFriendsTests;
 			productName = MeetAndWalkTests;
 			productReference = 020C30531A4783E700A43A8E /* MeetAndWalkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -183,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 020C302F1A4783E700A43A8E /* Build configuration list for PBXProject "MeetAndWalk" */;
+			buildConfigurationList = 020C302F1A4783E700A43A8E /* Build configuration list for PBXProject "WalkWithFriends" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -196,8 +224,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				020C30331A4783E700A43A8E /* MeetAndWalk */,
-				020C30521A4783E700A43A8E /* MeetAndWalkTests */,
+				020C30331A4783E700A43A8E /* WalkWithFriends */,
+				020C30521A4783E700A43A8E /* WalkWithFriendsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				020C30461A4783E700A43A8E /* DetailViewController.m in Sources */,
+				020C30681A47886200A43A8E /* Location.m in Sources */,
 				020C30431A4783E700A43A8E /* MasterViewController.m in Sources */,
 				020C303D1A4783E700A43A8E /* AppDelegate.m in Sources */,
+				020C30651A47886100A43A8E /* Run.m in Sources */,
 				020C30401A4783E700A43A8E /* MeetAndWalk.xcdatamodeld in Sources */,
 				020C303A1A4783E700A43A8E /* main.m in Sources */,
 			);
@@ -248,7 +278,7 @@
 /* Begin PBXTargetDependency section */
 		020C30551A4783E700A43A8E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 020C30331A4783E700A43A8E /* MeetAndWalk */;
+			target = 020C30331A4783E700A43A8E /* WalkWithFriends */;
 			targetProxy = 020C30541A4783E700A43A8E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -356,6 +386,7 @@
 				INFOPLIST_FILE = MeetAndWalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -366,6 +397,7 @@
 				INFOPLIST_FILE = MeetAndWalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -406,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		020C302F1A4783E700A43A8E /* Build configuration list for PBXProject "MeetAndWalk" */ = {
+		020C302F1A4783E700A43A8E /* Build configuration list for PBXProject "WalkWithFriends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				020C305B1A4783E700A43A8E /* Debug */,
@@ -415,21 +447,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		020C305D1A4783E700A43A8E /* Build configuration list for PBXNativeTarget "MeetAndWalk" */ = {
+		020C305D1A4783E700A43A8E /* Build configuration list for PBXNativeTarget "WalkWithFriends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				020C305E1A4783E700A43A8E /* Debug */,
 				020C305F1A4783E700A43A8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		020C30601A4783E700A43A8E /* Build configuration list for PBXNativeTarget "MeetAndWalkTests" */ = {
+		020C30601A4783E700A43A8E /* Build configuration list for PBXNativeTarget "WalkWithFriendsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				020C30611A4783E700A43A8E /* Debug */,
 				020C30621A4783E700A43A8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
