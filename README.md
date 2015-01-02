@@ -1,4 +1,4 @@
-meetandwalk
+Walk With Friends
 ===========
 
 User Stories
