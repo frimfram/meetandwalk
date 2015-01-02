@@ -68,21 +68,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKX-e9-6ua">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <connections>
-                                    <outlet property="delegate" destination="a9S-DP-zVB" id="EpX-20-pQK"/>
-                                </connections>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY3-wE-7Rt">
-                                <rect key="frame" x="89" y="255" width="143" height="58"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startPressed:" destination="a9S-DP-zVB" eventType="touchUpInside" id="eKI-ZY-zh3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0e-bV-Jbe">
                                 <rect key="frame" x="89" y="339" width="143" height="58"/>
                                 <state key="normal" title="Stop">
@@ -110,30 +95,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YY3-wE-7Rt">
+                                <rect key="frame" x="89" y="255" width="143" height="58"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPressed:" destination="a9S-DP-zVB" eventType="touchUpInside" id="eKI-ZY-zh3"/>
+                                    <segue destination="Ah7-4n-0Wa" kind="push" id="UJS-U5-dYJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="ZG9-6X-UJz" secondAttribute="centerX" id="3Gk-Rw-mLX"/>
-                            <constraint firstItem="VBn-Gu-yff" firstAttribute="top" secondItem="xKX-e9-6ua" secondAttribute="bottom" id="4W6-G6-x9P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xKX-e9-6ua" secondAttribute="trailing" constant="-16" id="Fzp-5P-6wU"/>
                             <constraint firstItem="PLR-4Z-ini" firstAttribute="top" secondItem="nuI-Mp-hFo" secondAttribute="bottom" constant="28" id="Kqe-1G-OTY"/>
-                            <constraint firstItem="xKX-e9-6ua" firstAttribute="leading" secondItem="Cpm-44-mRN" secondAttribute="leadingMargin" constant="-16" id="NPf-cS-k7r"/>
                             <constraint firstItem="ZG9-6X-UJz" firstAttribute="top" secondItem="Cpm-44-mRN" secondAttribute="topMargin" constant="100" id="PNL-H7-0tm"/>
                             <constraint firstItem="nuI-Mp-hFo" firstAttribute="top" secondItem="ZG9-6X-UJz" secondAttribute="bottom" constant="47" id="X4F-4H-RhL"/>
                             <constraint firstAttribute="centerX" secondItem="PLR-4Z-ini" secondAttribute="centerX" id="d51-sc-g2Y"/>
-                            <constraint firstItem="xKX-e9-6ua" firstAttribute="top" secondItem="olK-Lx-qFJ" secondAttribute="bottom" id="gf2-Gc-KlH"/>
                             <constraint firstAttribute="centerX" secondItem="nuI-Mp-hFo" secondAttribute="centerX" id="jmt-7d-T9S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Yh-5P-EF1"/>
                     <connections>
                         <outlet property="distLabel" destination="ZG9-6X-UJz" id="Ooq-Y9-dsM"/>
-                        <outlet property="mapView" destination="xKX-e9-6ua" id="zgt-QD-AAQ"/>
                         <outlet property="paceLabel" destination="PLR-4Z-ini" id="U3o-BF-j4A"/>
                         <outlet property="startButton" destination="YY3-wE-7Rt" id="vAw-ud-bjE"/>
                         <outlet property="stopButton" destination="W0e-bV-Jbe" id="tko-1s-Dqs"/>
                         <outlet property="timeLabel" destination="nuI-Mp-hFo" id="7g6-8N-FeN"/>
-                        <segue destination="Ah7-4n-0Wa" kind="push" identifier="RunDetails" id="5E0-Fq-CH5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6L-ZB-Igu" userLabel="First Responder" sceneMemberID="firstResponder"/>
