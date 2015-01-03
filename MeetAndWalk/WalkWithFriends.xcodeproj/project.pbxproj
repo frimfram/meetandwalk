@@ -45,7 +45,7 @@
 		020C30481A4783E700A43A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		020C304A1A4783E700A43A8E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		020C304D1A4783E700A43A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		020C30531A4783E700A43A8E /* MeetAndWalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MeetAndWalkTests.xctest; path = WalkWithFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		020C30531A4783E700A43A8E /* WalkWithFriendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkWithFriendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		020C30581A4783E700A43A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020C30591A4783E700A43A8E /* MeetAndWalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetAndWalkTests.m; sourceTree = "<group>"; };
 		020C30631A47886100A43A8E /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Run.h; path = model/Run.h; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				020C30341A4783E700A43A8E /* WalkWithFriends.app */,
-				020C30531A4783E700A43A8E /* MeetAndWalkTests.xctest */,
+				020C30531A4783E700A43A8E /* WalkWithFriendsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 			);
 			name = WalkWithFriendsTests;
 			productName = MeetAndWalkTests;
-			productReference = 020C30531A4783E700A43A8E /* MeetAndWalkTests.xctest */;
+			productReference = 020C30531A4783E700A43A8E /* WalkWithFriendsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -447,7 +447,7 @@
 				INFOPLIST_FILE = MeetAndWalkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetAndWalk.app/MeetAndWalk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkWithFriends.app/WalkWithFriends";
 			};
 			name = Debug;
 		};
@@ -462,7 +462,7 @@
 				INFOPLIST_FILE = MeetAndWalkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeetAndWalk.app/MeetAndWalk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkWithFriends.app/WalkWithFriends";
 			};
 			name = Release;
 		};
