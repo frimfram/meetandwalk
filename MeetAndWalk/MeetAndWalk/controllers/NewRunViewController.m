@@ -47,6 +47,8 @@ static NSString * const detailSegueName = @"RunDetails";
     if( [self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] ) {
         [self.locationManager requestWhenInUseAuthorization];
     }
+    
+    self.mapView.showsUserLocation = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,6 +79,8 @@ static NSString * const detailSegueName = @"RunDetails";
     if(!self.locationManager) {
         self.locationManager = [[CLLocationManager alloc] init];
     }
+    
+    self.mapView.showsUserLocation = NO;
     
     [self startLocationUpdates];
 }
@@ -195,6 +199,19 @@ static NSString * const detailSegueName = @"RunDetails";
         return aRenderer;
     }
     return nil;
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    CLLocation *newLocation = userLocation.location;
+
+    if(newLocation.horizontalAccuracy < 20) {
+        MKCoordinateRegion mapRegion;
+        mapRegion.center = userLocation.location.coordinate;
+        mapRegion.span.latitudeDelta = 0.1;
+        mapRegion.span.longitudeDelta = 0.1;
+    
+        [self.mapView setRegion:mapRegion animated:YES];
+    }
 }
 
 @end
