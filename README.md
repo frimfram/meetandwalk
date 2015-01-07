@@ -1,6 +1,10 @@
 Walk With Friends
 ===========
 
+Current App Status
+
+![Alt text](https://github.com/frimfram/meetandwalk/blob/master/walkwithfriends.gif  "MeetAndWalk Mockup")
+
 User Stories
 
 1.  The user can pick a spot on the map as a meeting location
